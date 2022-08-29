@@ -17,7 +17,7 @@ public class Linecomparison {
 				System.out.println("Enter y2 value: ");
 				int y2=scan.nextInt();
 				int r= ((int)Math.pow((x2-x1), 2)+(int)Math.pow((y2-y1), 2));
-				double Length= Math.sqrt(r);
+				Double Length= Math.sqrt(r);
 				System.out.println("Length of Line1 is: " + Length);
 
 				System.out.println("Enter a1 value: ");
@@ -29,17 +29,28 @@ public class Linecomparison {
 				System.out.println("Enter b2 value: ");
 				int b2=scan.nextInt();
 				int res= ((int)Math.pow((a2-a1), 2)+(int)Math.pow((b2-b1), 2));
-				double Length1= Math.sqrt(res);
+				Double Length1= Math.sqrt(res);
 				System.out.println("Length of Line2 is: " + Length1);
-
+				
 				if(Length==Length1) {
 					System.out.println("Two lines are equal");
 				}
 				else {
 					System.out.println("Two lines are not equal");
 				}
-		}
 				
+				
+				 int result = Length.compareTo(Length1);
+				if(result > 0)
+					System.out.println("Length of First end points is Greater than Length of Second end Points");
+				else if(result < 0)
+					System.out.println("Length of First end points is Less than Length of Second end Points");
+				else
+					System.out.println("Both lines are Equal");
+		}
+		
 }
+				
+
 
 
